@@ -15,4 +15,5 @@ urlpatterns = [
     # じゃんけんページ
     path('janken_main/', views.janken_main, name='janken_main'),
     path('janken', views.janken, name='janken'),
+    path('janken/<int:choice_num>', views.janken_choiced, name='janken_choiced'),
 ]

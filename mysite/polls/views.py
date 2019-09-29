@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-import polls.janken_AI
+import polls.janken_AI as jAI
+import json
+import numpy as np
 
 # Create your views here.
 def index(request):
@@ -25,7 +27,9 @@ def vote(request, question_id):
 def janken_main(request):
     return render(request, 'polls/janken_main.html')
 
-def janken(request):
-    jankenAI = janken_AI.janken()
+def janken(request,choice_num):
+    jankenAI = jAI.janken()
+
+
 
     return render(request, 'polls/janken.html')
