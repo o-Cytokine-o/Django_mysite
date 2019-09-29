@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-import janken_AI
+import polls.janken_AI
 
 # Create your views here.
 def index(request):

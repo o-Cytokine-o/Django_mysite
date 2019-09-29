@@ -1,3 +1,8 @@
 .wrap{
     padding: 2% 5%;
 }
+
+#camera {
+	width: 400px;
+	height: 300px;
+}
