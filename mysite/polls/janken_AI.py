@@ -24,11 +24,14 @@ class janken():
     Jprev_set = np.array([Jprev])
     Jnow_set = np.array([j])
 
-    model = create_model(Jprev_set)
+    model = None
 
     win = 0
     draw = 0
     lose = 0
+
+    def __init__(self):
+        model = self.create_model(Jprev_set)
 
     def create_model(self,Jprev_set):
         #モデルの初期化

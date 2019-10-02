@@ -27,7 +27,11 @@ def vote(request, question_id):
 def janken_main(request):
     return render(request, 'polls/janken_main.html')
 
-def janken(request,choice_num):
+def janken(request):
+    
+    return render(request, 'polls/janken.html')
+
+def janken_choiced(request,choice_num):
     jankenAI = jAI.janken()
 
 

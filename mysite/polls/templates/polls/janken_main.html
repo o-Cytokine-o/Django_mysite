@@ -8,7 +8,10 @@
     <!-- Bootstrap CSS -->
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    {% load static %}
+    {% block extrahead %}
     <link rel="stylesheet" href="{% static 'polls/css/bootstrap.min.css' %}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% endblock %}
 
     <title>Hello, world!</title>
   </head>
@@ -22,7 +25,7 @@
             <div class="card-body">
               <h5 class="card-title">ノーマルモード</h5>
               <p class="card-text">始めるには「スタート」ボタンを押す</p>
-              <a class="btn btn-primary" href="janken/" role="button">スタート！</a>
+              <a class="btn btn-primary" href="http://localhost:8000/polls/janken/" role="button">スタート！</a>
             </div>
           </div>
           <div class="col">
